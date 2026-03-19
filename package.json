@@ -19,7 +19,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,html,css}\" --ignore-unknown",
     "prepare": "husky",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist" 
+    "deploy": "main -d dist" 
   },
   "homepage": "https://miruna-movileanu.github.io/myacul-react-js",
 
