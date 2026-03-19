@@ -26,7 +26,8 @@ if (fs.existsSync(screensDir)) {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "./", // Use './' for relative paths
+  base: '/myacul-react-js/',
+
   server: {
     port: 4000,
     strictPort: true,
