@@ -47,8 +47,7 @@ function LoginScreen() {
 
   loginManager.federatedLogin({
     connection: "google-oauth2",
-    custom_param: "custom_value"  
-    
+    loginHint: 'user@example.com' 
   });
 
 
