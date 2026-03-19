@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LoginForm from "./components/LoginForm";
 import { useLoginManager } from "./hooks/useLoginManager";
+import Login from "@auth0/auth0-acul-js/login";
 
 function LoginScreen() {
   const { loginInstance, screen, transaction, locales } = useLoginManager();
@@ -42,6 +43,15 @@ function LoginScreen() {
     </>
   );
 
+  const loginManager = new Login();
+
+  loginManager.federatedLogin({
+    connection: "google-oauth2",
+    custom_param: "custom_value"  
+    
+  });
+
+
   return (
     // Applying UDS theme overrides using the "theme-universal" class
     <ULThemePageLayout className="theme-universal">
@@ -58,3 +68,5 @@ function LoginScreen() {
 }
 
 export default LoginScreen;
+
+
